@@ -1,0 +1,35 @@
+{% load static %}
+
+
+<section class="text-white bg-primary mb-0" id="about">
+    <div class="container">
+        <h2 class="text-uppercase text-center text-white">Apropos</h2>
+        <hr class="star-light mb-5">
+        <h5 class="text-center mb-4">
+            Je suis passionné par la programmation informatique. <br>
+            Je conçois de sites web, administre de ssytème. <br>
+            Pour y parvenir, j'utlise les technologies suivantes:
+        </h5>
+        <div class="content" style="margin: 0 auto; display: flex; justify-content: center;">
+            <div class="d-flex flex-wrap justify-content-center">
+                {% for tech in technologies %}
+                    <div class="card mb-3" style="max-width: 30rem; margin: 10px; background: #2D3D50;">
+                        <div class="card-header">
+                            <h4>{{ tech.icon.as_html }} {{ tech.name }}</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">{{ tech.note }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a class="btn btn-outline-light btn-xl" role="button" href="{% static 'files/cv.pdf' %}">
+                <i class="fa fa-download mr-2"></i>
+                <span>Téléchager CV</span>
+            </a>
+        </div>
+    </div>
+</section>

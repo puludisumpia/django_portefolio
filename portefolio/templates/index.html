@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ site_name }}-Portefolio
+{% endblock title %}
+
+{% load static %}
+
+{% block content %}
+    {% include "portefolio.html" %}
+
+    {% include "apropos.html" %}
+
+    {% include "contact.html" %}
+
+{% endblock content %}
+    
