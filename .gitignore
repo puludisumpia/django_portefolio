@@ -1,3 +1,6 @@
 venv
 venv/
 db.sqlite3
+main/__pycache__/
+portefolio/__pycache__/
+media/
